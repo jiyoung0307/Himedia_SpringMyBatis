@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.connection.javaconfig.MenuService"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.connection.javaconfig.MenuDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.connection.javaconfig.MenuServiceImpl"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.PropertySource"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.connection.javaconfig.config.ContextConfiguration"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+    <fullyQualifiedTypeName name="org.mybatis.spring.SqlSessionFactoryBean"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.connection.xmlconfig.MenuService"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.connection.xmlconfig.MenuDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.programmatic.model.service.OrderService"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.programmatic.model.dto.OrderDTO"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.reflection.SystemMetaObject"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.programmatic.run.Application"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.Array"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.programmatic.model.service.OrderServiceImpl"/>
+    <fullyQualifiedTypeName name="org.mybatis.spring.SqlSessionTemplate"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.programmatic.model.dao.OrderMapper"/>
+    <fullyQualifiedTypeName name="com.greedy.section01.programmatic.model.dto.OrderMenuDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.TransactionDefinition"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.support.DefaultTransactionDefinition"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.datasource.DataSourceTransactionManager"/>
+    <fullyQualifiedTypeName name="com.greedy.section02.aop.model.dto.OrderDTO"/>
+    <fullyQualifiedTypeName name="com.greedy.section02.aop.model.service.OrderService"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Propagation"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Isolation"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="com.greedy.section02.aop.model.dao.OrderMapper"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.greedy.section02.aop.model.dto.OrderMenuDTO"/>
+</qualifiedTypeNameHistroy>

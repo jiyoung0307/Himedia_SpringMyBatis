@@ -1,0 +1,35 @@
+package com.greedy.section01.connection.javaconfig;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.greedy.section01.connection.javaconfig.config.ContextConfiguration;
+
+public class Application {
+
+	public static void main(String[] args) {
+		/* 손수 컨테이너를 만들어보자 */
+		
+		/*
+		 * 1. 처음 spring-core 관련 라이브러리 + 로깅 처리를 위한 라이브러리
+		 * 	  + mybatis와 ojdbc8라이브러리 + resource(buildpath에 등록)(db연결 정보 및 로깅 관련)
+		 */
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(ContextConfiguration.class);
+		
+//		System.out.println("드디어 컨테이너 설정 완성...");
+		
+		System.out.println("전체 메뉴 조회하기");
+		
+		MenuService menuService = context.getBean("menuService", MenuService.class);
+		
+		List<MenuDTO> menuList = menuService.selectMenuList();
+		
+		for(MenuDTO menu : menuList) {
+			System.out.println(menu);
+		}
+	}
+
+}

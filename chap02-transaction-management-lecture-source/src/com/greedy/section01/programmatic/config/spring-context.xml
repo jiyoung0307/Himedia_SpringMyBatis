@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- namespace에서 context 스키마를 추가해야 한다. (외부 리소스 쓰겠다)-->
+	<context:property-placeholder location="connection-info.properties"/>
+
+	<context:component-scan base-package="com.greedy.section01.programmatic"/>
+	
+	<!-- SqlSessionTemplate 빈 등록 -->
+	<bean id="sqlSessionTemplate"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<!-- SqlSessionFactoryBean 빈 등록 -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation"
+		value="com/greedy/section01/programmatic/config/mybatis-config.xml"/>
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- BasicDataSource (외부 리소스 쓰겠다)-->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${oracle.dev.driver}"/>
+		<property name="url" value="${oracle.dev.url}"/>
+		<property name="username" value="${oracle.dev.username}"/>
+		<property name="password" value="${oracle.dev.password}"/>
+		<property name="defaultAutoCommit" value="false"/>
+	</bean>
+	
+	<!-- 매퍼를 Spring 설정에서 추가해 보자. -->
+	<mybatis:scan base-package="com.greedy.section01.programmatic.model.dao"/>
+	
+	<!-- 스프링의 트랜잭션 관리용 bean을 등록하자 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">	<!-- Connection 객체 -->
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+</beans>
+

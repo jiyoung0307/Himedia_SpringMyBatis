@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;chap02-transaction-management-lecture-source/src/com/greedy/section01/programmatic/model/service/ServiceImpl.java&apos; to &apos;OrderServiceImpl.java&apos;" description="Rename resource &apos;ServiceImpl.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/greedy/section01/programmatic/model/service/ServiceImpl.java" name="OrderServiceImpl.java" stamp="1655963138776" updateReferences="true"/>
+</session>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="MenuMapper">
+  
+  <resultMap type="com.greedy.section01.connection.javaconfig.MenuDTO" id="menuResultMap">
+  	<id property="code" column="MENU_CODE"/>
+  	<result property="name" column="MENU_NAME"/>
+  	<result property="price" column="MENU_PRICE"/>
+  	<result property="categoryCode" column="CATEGORY_CODE"/>
+  	<result property="orderableStatus" column="ORDERABLE_STATUS"/>
+  </resultMap>
+  
+  <select id="selectMenuList" resultMap="menuResultMap">
+  	SELECT
+  	       A.MENU_CODE
+  	     , A.MENU_NAME
+  	     , A.MENU_PRICE
+  	     , A.CATEGORY_CODE
+  	     , A.ORDERABLE_STATUS
+  	  FROM TBL_MENU A
+  	 WHERE A.ORDERABLE_STATUS = 'Y'
+  	 ORDER BY A.MENU_CODE
+  </select>
+</mapper>
